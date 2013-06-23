@@ -1,0 +1,42 @@
+
+<div class="call-for-papers">
+
+  <div class="title">Submit an abstract here</div>
+
+  <div class="information">
+    If you are interested in submitting a paper to present. Upload you paper here.
+  </div>
+  <div class="form-bucket">
+    <div class="empty-box"></div>
+    <%= form_for(@file, multipart: true) do |f| %>
+
+      <div class="form-label"> Your Name</div>
+      <%= text_field_tag "data_file[name]", @file.name %>
+
+      <div class="empty-box"></div>
+
+      <div class="form-label"> Your Email </div>
+      <%= text_field_tag "data_file[email]", @file.email %>
+
+      <div class="empty-box"></div>
+
+      <div class="form-label"> Home Institution </div>
+      <%= text_field_tag "data_file[institution]", @file.institution %>
+
+      <div class="empty-box"></div>
+
+      <div class="form-label"> Title of Your Paper </div>
+      <%= text_field_tag "data_file[paper_name]", @file.paper_name %>
+
+      <div class="empty-box"></div>
+
+      <div class="form-label"> Select a File </div>
+      <div class="field">
+        <%= f.file_field 'upload' %>
+      </div>
+      <div class="submit">
+        <%= submit_tag "Upload" %>
+      </div>
+  <% end %>
+  </div>
+</div>
