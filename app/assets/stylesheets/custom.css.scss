@@ -241,10 +241,18 @@ body {
   }
   .a-line {
     font-size: 13px;
-    padding:  1px 0px 1px 78px;
     font-style: italic;
+    padding:  1px 0px 1px 78px;
+    a {
+      font-size: 13px;
+      font-style: italic;
+      color: $fourBlue;
+      font-weight:bold
+    a:hover {
+        color: $fiveBlue;
+      }
+    }
   }
-
 }
 
 
